@@ -2,10 +2,11 @@
 Written in Ruby 2.3.1
 
 ## Dependencies
+* nokogiri
 * ruby-dicom ([Github](https://github.com/dicom/ruby-dicom))
 
 ## Installing dependencies
-Run `gem install dicom` from terminal
+Run `gem install dicom` and `gem install nokogiri` (if on Windows) from terminal
 
 ## Running
 Place all patient XMLs in some folder.
