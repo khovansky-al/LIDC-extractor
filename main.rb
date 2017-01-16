@@ -76,9 +76,9 @@ xmls.each do |xml|
       end
 
       metadata_csv.close
-      i += 1
       puts
     end
+    i += 1
   rescue Exception => e # yeaaaah, rescue Exception :D
     puts "XML file #{xml} can't be processed"
     puts e.message
