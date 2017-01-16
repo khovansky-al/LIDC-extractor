@@ -1,4 +1,10 @@
 # LIDC Extractor
+This script extracts patients' diagnoses from XML files that come with LIDC dataset. 
+For each patient, study case and radiologist that surveyed his case this script outputs a series of files:
+
+* data.csv - Metadata that contains ids of all nodules, it's malignancy and corresponding CSV file
+* %node_id%.csv - File that contains coordinates of ROIs painted by radiologist (the ones that are marked as "inclusion==TRUE"). For each coordinate set it also contains .dcm filename that corresponds to this regions.
+
 Written in Ruby 2.3.1
 
 ## Dependencies
@@ -6,7 +12,7 @@ Written in Ruby 2.3.1
 * ruby-dicom ([Github](https://github.com/dicom/ruby-dicom))
 
 ## Installing dependencies
-Run `gem install dicom` and `gem install nokogiri` (if on Windows) from terminal
+Run `gem install dicom` and `gem install nokogiri` from terminal
 
 ## Running
 Place all patient XMLs in some folder.
@@ -25,3 +31,6 @@ Run with `ruby main.rb [xml_path] [dcm_path]`.
       * /doesn't matter how this folder is named
         * /..
         * /000001.dcm
+
+## Results
+Results can be found in `results` folder right next to the script
